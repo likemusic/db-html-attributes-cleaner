@@ -3,7 +3,8 @@
     "description": "Command line tool for removing html-attributes from mysql tables content (configurable).",
     "type": "project",
     "require": {
-        "symfony/console": "^5.1"
+        "symfony/console": "^5.1",
+        "ext-json": "*"
     },
     "license": "MIT",
     "authors": [

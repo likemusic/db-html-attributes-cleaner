@@ -3,11 +3,13 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Symfony\Component\Console\Application;
+use Likemusic\DbHtmlAttributesCleaner\Config\ConfigProvider;
 use Likemusic\DbHtmlAttributesCleaner\DbHtmlAttributesCleanCommand;
+use Symfony\Component\Console\Application;
 
 $application = new Application();
+$configProvider = new ConfigProvider();
 
-$application->add(new DbHtmlAttributesCleanCommand());
+$application->add(new DbHtmlAttributesCleanCommand($configProvider));
 
 $application->run();
