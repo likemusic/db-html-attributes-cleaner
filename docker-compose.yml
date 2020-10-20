@@ -9,3 +9,9 @@ services:
     environment:
       - XDEBUG_CONFIG=remote_enable=${XDEBUG_REMOTE_ENABLE} remote_host=${XDEBUG_REMOTE_HOST} remote_port=${XDEBUG_REMOTE_PORT} remote_autostart=${XDEBUG_REMOTE_AUTOSTART} remote_log=${XDEBUG_REMOTE_LOG}
       - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
+
+  composer:
+    build: ./docker/composer
+    volumes:
+      - ./:/var/php/
+    working_dir: /var/php
