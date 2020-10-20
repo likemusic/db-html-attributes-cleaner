@@ -1,0 +1,15 @@
+{
+    "name": "likemusic/db-html-attributes-cleaner",
+    "description": "Command line tool for removing html-attributes from mysql tables content (configurable).",
+    "type": "project",
+    "require": {
+        "symfony/console": "^5.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valerij Ivashchenko",
+            "email": "likemusicdev@gmail.com"
+        }
+    ]
+}
