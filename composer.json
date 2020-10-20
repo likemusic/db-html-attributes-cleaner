@@ -11,5 +11,10 @@
             "name": "Valerij Ivashchenko",
             "email": "likemusicdev@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Likemusic\\DbHtmlAttributesCleaner\\": "src/"
+        }
+    }
 }
