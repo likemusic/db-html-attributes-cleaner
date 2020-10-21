@@ -1,8 +1,8 @@
 <?php
 
-namespace Likemusic\DbHtmlAttributesCleaner\Config;
+namespace Likemusic\DbColumnsUpdater\Config;
 
-use Likemusic\DbHtmlAttributesCleaner\Config\Connection\ConnectionConfig;
+use Likemusic\DbColumnsUpdater\Config\Connection\ConnectionConfig;
 
 class Config
 {
@@ -38,8 +38,13 @@ class Config
         return $this->configArray[ConfigKeysEnum::CONNECTION];
     }
 
-    public function getDatabasesConfigArray(): array
+    public function getTablesConfigArray(): array
     {
-        return $this->configArray[ConfigKeysEnum::DATABASES];
+        return $this->configArray[ConfigKeysEnum::TABLES];
+    }
+
+    public function getConvertorsConfigArray(): array
+    {
+        return $this->configArray[ConfigKeysEnum::CONVERTERS];
     }
 }

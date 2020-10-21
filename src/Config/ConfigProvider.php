@@ -1,6 +1,6 @@
 <?php
 
-namespace Likemusic\DbHtmlAttributesCleaner\Config;
+namespace Likemusic\DbColumnsUpdater\Config;
 
 class ConfigProvider
 {

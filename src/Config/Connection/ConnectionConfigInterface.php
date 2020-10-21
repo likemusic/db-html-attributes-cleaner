@@ -1,12 +1,14 @@
 <?php
 
-namespace Likemusic\DbHtmlAttributesCleaner\Config\Connection;
+namespace Likemusic\DbColumnsUpdater\Config\Connection;
 
 interface ConnectionConfigInterface
 {
-    public function getHost();
+    public function getHost(): string;
 
-    public function getUser();
+    public function getDatabase(): string;
 
-    public function getPassword();
+    public function getUser(): ?string;
+
+    public function getPassword(): ?string;
 }

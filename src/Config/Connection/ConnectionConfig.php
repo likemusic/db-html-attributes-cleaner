@@ -1,6 +1,6 @@
 <?php
 
-namespace Likemusic\DbHtmlAttributesCleaner\Config\Connection;
+namespace Likemusic\DbColumnsUpdater\Config\Connection;
 
 class ConnectionConfig implements ConnectionConfigInterface
 {
@@ -12,7 +12,7 @@ class ConnectionConfig implements ConnectionConfigInterface
         $this->configArray = $connectionConfigArray;
     }
 
-    public function getHost()
+    public function getHost(): string
     {
         return $this->getValueByKey(ConnectionConfigKeysEnum::HOST);
     }
@@ -22,13 +22,23 @@ class ConnectionConfig implements ConnectionConfigInterface
         return $this->configArray[$key];
     }
 
-    public function getUser()
+    public function getDatabase(): string
+    {
+        return $this->getValueByKey(ConnectionConfigKeysEnum::DATABASE);
+    }
+
+    public function getUser(): ?string
     {
         return $this->getValueByKey(ConnectionConfigKeysEnum::USER);
     }
 
-    public function getPassword()
+    public function getPassword(): ?string
     {
         return $this->getValueByKey(ConnectionConfigKeysEnum::PASSWORD);
+    }
+
+    public function getCharset(): ?string
+    {
+        return $this->getValueByKey(ConnectionConfigKeysEnum::CHARSET);
     }
 }
